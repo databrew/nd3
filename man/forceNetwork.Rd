@@ -130,7 +130,7 @@ forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
 #### JSON Data Example
 # Load data JSON formated data into two R data frames
 # Create URL. paste0 used purely to keep within line width.
-URL <- paste0("https://cdn.rawgit.com/christophergandrud/networkD3/",
+URL <- paste0("https://cdn.rawgit.com/christophergandrud/nd3/",
               "master/JSONdata/miserables.json")
 
 MisJson <- jsonlite::fromJSON(URL)

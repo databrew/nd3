@@ -17,7 +17,7 @@ saveNetwork(network, file, selfcontained = TRUE)
 placed in an adjacent directory.}
 }
 \description{
-Save a networkD3 graph to an HTML file for sharing with others. The HTML can
+Save a nd3 graph to an HTML file for sharing with others. The HTML can
 include it's dependencies in an adjacent directory or can bundle all
 dependencies into the HTML file (via base64 encoding).
 }

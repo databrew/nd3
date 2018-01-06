@@ -82,7 +82,7 @@ Create a D3 JavaScript Sankey diagram
 \dontrun{
 # Recreate Bostock Sankey diagram: http://bost.ocks.org/mike/sankey/
 # Load energy projection data
-URL <- paste0('https://cdn.rawgit.com/christophergandrud/networkD3/',
+URL <- paste0('https://cdn.rawgit.com/christophergandrud/nd3/',
               'master/JSONdata/energy.json')
 energy <- jsonlite::fromJSON(URL)
 
