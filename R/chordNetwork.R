@@ -132,17 +132,17 @@ chordNetwork <- function(Data,
                               knitr.figure = FALSE,
                               knitr.defaultWidth = 500,
                               knitr.defaultHeight = 500),
-    package = "networkD3")
+    package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 chordNetworkOutput <- function(outputId, width = "100%", height = "500px") {
     shinyWidgetOutput(outputId, "chordNetwork", width, height, 
-                      package = "networkD3")
+                      package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 renderchordNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted) { expr <- substitute(expr) } # force quoted

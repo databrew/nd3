@@ -74,7 +74,7 @@ margin_handler <- function(margin){
   # margin can be either a single value or a list with any of
   #    top, right, bottom, left
   # if margin is a single value, then we will stick
-  #    with the original behavior of networkD3 and use it for the right margin
+  #    with the original behavior of nd3 and use it for the right margin
   if(!is.null(margin) && length(margin) == 1 && is.null(names(margin))){
     margin <- list(
       top = NULL,
@@ -100,7 +100,7 @@ margin_handler <- function(margin){
 }
 
 
-#' Function to convert igraph graph to a list suitable for networkD3
+#' Function to convert igraph graph to a list suitable for nd3
 #'
 #' @param g an \code{igraph} class graph object
 #' @param group an object that contains node group values, for example, those
@@ -122,8 +122,8 @@ margin_handler <- function(margin){
 #' wc <- cluster_walktrap(karate)
 #' members <- membership(wc)
 #'
-#' # Convert to object suitable for networkD3
-#' karate_d3 <- igraph_to_networkD3(karate, group = members)
+#' # Convert to object suitable for nd3
+#' karate_d3 <- igraph_to_nd3(karate, group = members)
 #'
 #' # Create force directed network plot
 #' forceNetwork(Links = karate_d3$links, Nodes = karate_d3$nodes,
@@ -146,8 +146,8 @@ margin_handler <- function(margin){
 #' wt <- cluster_walktrap(SchoolsJournals, steps = 6)
 #' members <- membership(wt)
 #'
-#' # Convert igraph to list for networkD3
-#' sj_list <- igraph_to_networkD3(SchoolsJournals, group = members)
+#' # Convert igraph to list for nd3
+#' sj_list <- igraph_to_nd3(SchoolsJournals, group = members)
 #'
 #' # Plot as a forceDirected Network
 #' forceNetwork(Links = sj_list$links, Nodes = sj_list$nodes, Source = 'source',
@@ -159,7 +159,7 @@ margin_handler <- function(margin){
 #' @importFrom magrittr %>%
 #' @export
 
-igraph_to_networkD3 <- function(g, group, what = 'both') {
+igraph_to_nd3 <- function(g, group, what = 'both') {
     # Sanity check
     if (!('igraph' %in% class(g))) stop('g must be an igraph class object.',
                                       call. = FALSE)

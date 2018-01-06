@@ -105,14 +105,14 @@ simpleNetwork <- function(Data,
     do.call(forceNetwork, options)
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 simpleNetworkOutput <- function(outputId, width = "100%", height = "500px") {
     shinyWidgetOutput(outputId, "forceNetwork", width, height,
-                        package = "networkD3")
+                        package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 renderSimpleNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted) { expr <- substitute(expr) } # force quoted

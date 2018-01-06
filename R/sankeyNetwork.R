@@ -46,7 +46,7 @@
 #' \dontrun{
 #' # Recreate Bostock Sankey diagram: http://bost.ocks.org/mike/sankey/
 #' # Load energy projection data
-#' URL <- paste0('https://cdn.rawgit.com/christophergandrud/networkD3/',
+#' URL <- paste0('https://cdn.rawgit.com/christophergandrud/nd3/',
 #'               'master/JSONdata/energy.json')
 #' energy <- jsonlite::fromJSON(URL)
 #'
@@ -138,17 +138,17 @@ sankeyNetwork <- function(Links, Nodes, Source, Target, Value,
     htmlwidgets::createWidget(name = "sankeyNetwork", x = list(links = LinksDF,
         nodes = NodesDF, options = options), width = width, height = height,
         htmlwidgets::sizingPolicy(padding = 10, browser.fill = TRUE),
-        package = "networkD3")
+        package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 sankeyNetworkOutput <- function(outputId, width = "100%", height = "500px") {
     shinyWidgetOutput(outputId, "sankeyNetwork", width, height,
-        package = "networkD3")
+        package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 renderSankeyNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted)

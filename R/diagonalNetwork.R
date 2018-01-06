@@ -30,7 +30,7 @@
 #' #### Create tree from JSON formatted data
 #' ## Download JSON data
 #' # Create URL. paste0 used purely to keep within line width.
-#' URL <- paste0("https://cdn.rawgit.com/christophergandrud/networkD3/",
+#' URL <- paste0("https://cdn.rawgit.com/christophergandrud/nd3/",
 #'               "master/JSONdata//flare.json")
 #'               
 #' ## Convert to list format
@@ -128,17 +128,17 @@ diagonalNetwork <- function(
       width = width,
       height = height,
       htmlwidgets::sizingPolicy(padding = 10, browser.fill = TRUE),
-      package = "networkD3")
+      package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 diagonalNetworkOutput <- function(outputId, width = "100%", height = "800px") {
     shinyWidgetOutput(outputId, "diagonalNetwork", width, height,
-                        package = "networkD3")
+                        package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 renderDiagonalNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted) { expr <- substitute(expr) } # force quoted

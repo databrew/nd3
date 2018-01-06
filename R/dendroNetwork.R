@@ -123,17 +123,17 @@ dendroNetwork <- function(
         width = width,
         height = height,
         htmlwidgets::sizingPolicy(padding = 10, browser.fill = TRUE),
-        package = "networkD3")
+        package = "nd3")
     }
 
-    #' @rdname networkD3-shiny
+    #' @rdname nd3-shiny
     #' @export
     dendroNetworkOutput <- function(outputId, width = "100%", height = "800px") {
     shinyWidgetOutput(outputId, "dendroNetwork", width, height,
-                    package = "networkD3")
+                    package = "nd3")
     }
 
-    #' @rdname networkD3-shiny
+    #' @rdname nd3-shiny
     #' @export
     renderDendroNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
     if (!quoted) { expr <- substitute(expr) } # force quoted

@@ -83,7 +83,7 @@
 #' #### JSON Data Example
 #' # Load data JSON formated data into two R data frames
 #' # Create URL. paste0 used purely to keep within line width.
-#' URL <- paste0("https://cdn.rawgit.com/christophergandrud/networkD3/",
+#' URL <- paste0("https://cdn.rawgit.com/christophergandrud/nd3/",
 #'               "master/JSONdata/miserables.json")
 #'
 #' MisJson <- jsonlite::fromJSON(URL)
@@ -241,18 +241,18 @@ forceNetwork <- function(Links,
             width = width,
             height = height,
             htmlwidgets::sizingPolicy(padding = 10, browser.fill = TRUE),
-            package = "networkD3"
+            package = "nd3"
     )
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 forceNetworkOutput <- function(outputId, width = "100%", height = "500px") {
         shinyWidgetOutput(outputId, "forceNetwork", width, height,
-                          package = "networkD3")
+                          package = "nd3")
 }
 
-#' @rdname networkD3-shiny
+#' @rdname nd3-shiny
 #' @export
 renderForceNetwork <- function(expr, env = parent.frame(), quoted = FALSE) {
         if (!quoted) { expr <- substitute(expr) } # force quoted
